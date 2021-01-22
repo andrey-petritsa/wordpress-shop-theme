@@ -1,0 +1,30 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  padding: 0 10px;
+  text-align: center;
+  .contact__header {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+  .contact__tel{
+    font-size: 26px;
+  }
+
+  .contact__adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: 2em;
+    & span {
+      text-align: center;
+      display: block;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  //overflow: hidden;
+  //overflow-x: hidden;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none
+}
+@import 'header.scss';
+@import 'main.scss';
+@import 'products.scss';
+@import "big_product.scss";
+@import 'instruction.scss';
+@import 'question.scss';
+@import 'contact.scss';
+@import 'cart';
+@import 'thanks';
+

@@ -1,0 +1,66 @@
+.question {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  background: linear-gradient(180deg, rgba(42,34,170,0.47102591036414565) 1%, rgba(47,42,193,0.4962359943977591) 49%, rgba(120,66,212,0.48783263305322133) 88%), url("/wp-content/uploads/2021/01/question-image.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 30px 10px;
+}
+
+.question__form {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: 884px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .question__form-submit {
+      padding: 20px;
+      margin-top: 1em;
+      width: 100%;
+    }
+  }
+}
+
+.question__header {
+  font-size: 48px;
+  text-align: center;
+
+
+  & span {
+    display: block;
+    font-size: 24px;
+    width: 70%;
+    margin: 1em auto;
+
+  }
+
+  margin-bottom: 2em;
+}
+
+.question__form-tel {
+  padding: 20px;
+  width: 60%;
+  font-size: 20px;
+}
+
+.question__form-submit {
+  background-color: #2575FC;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 30%;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.22);
+  }
+}

@@ -1,0 +1,129 @@
+header {
+  //padding: 1em;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  background-color: white;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+  .nav {
+    @media (max-width: 900px) {
+      display: none;
+    }
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    display: flex;
+    margin: 0 auto;
+
+    .nav__link {
+      color: black;
+      font-weight: 600;
+      font-family: sans-serif;
+      margin-right: 2em;
+      text-decoration: none;
+
+      @media (max-width: 900px) {
+        margin-bottom: 1.5em;
+        text-align: center;
+        margin-right: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .nav__link:hover {
+      color: #6a11cb;
+      transition: 0.5s;
+    }
+
+    .nav__link:last-child {
+      margin-right: 0;
+    }
+  }
+  .telephone {
+    margin-right: 30px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+
+    @media (max-width: 900px) {
+      display: none;
+      margin: 0;
+    }
+
+    @media (max-width: 1300px) {
+      position: static;
+    }
+
+    &.active {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+
+  .burger {
+    $burger_width: 30px;
+    display: none;
+    @media (max-width: 900px) {
+      display: block;
+    }
+    cursor: pointer;
+    padding: 12px 0;
+    margin: 0 auto;
+
+    &.active {
+      span {
+        background: transparent;
+        &:before {
+          transform: rotate(45deg) translate(5px, 6px);
+        }
+        &:after {
+          transform: rotate(-45deg) translate(5px, -6px);
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: $burger_width;
+      height: 4px;
+      background: #222;
+      transition: all .2s ease-in-out;
+
+      &:before, &:after {
+        position: absolute;
+        background: #222;
+        content: '';
+        width: $burger_width;
+        height: 4px;
+        transition: all .2s ease-in-out;
+      }
+
+      &:before {
+        top: -8px;
+      }
+      &:after {
+        top: 8px;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,256 @@
+.small-product__image {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-product {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.cart {
+  min-height: 868px;
+  max-width: 800px;
+  padding: 70px;
+  margin: 0 auto;
+
+  @media (max-width: 900px) {
+    padding: 20px;
+    margin-top: 100px;
+
+    .small-product {
+      flex-direction: column;
+      margin-bottom: 100px;
+
+      .small-product__image {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .small-product__name {
+        flex: 0 1 auto;
+        font-size: 24px;
+      }
+
+      .small-product__quantity {
+        flex: 0 1 100%;
+        justify-content: space-around;
+        .small-product__btn {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      .small-product__final-price {
+        font-size: 32px;
+      }
+
+      .small-product__amount {
+        font-size: 28px;
+      }
+
+      .small-product__btn-delete {
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+      }
+
+
+    }
+
+
+  }
+}
+
+@media (max-width: 900px) {
+  .cart__sum {
+    font-size: 32px;
+  }
+}
+
+.cart__sum {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+
+  &:after {
+    content: " ₸";
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.cart__header {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cart-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  min-height: 300px;
+  justify-content: space-between;
+}
+
+.cart-form__row {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  justify-content: space-between;
+
+  & label {
+    font-weight: 300;
+    color: grey;
+  }
+}
+
+.cart-form__input {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.cart__sum {
+  text-align: right;
+}
+
+.cart-form__button {
+  padding: 15px;
+  background-color: #6A10CB;
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+.cart__product-wrapper {
+  $border_color: grey;
+  border-bottom: 1px solid $border_color;
+  border-top: 1px solid $border_color;
+  padding: 30px 0;
+}
+
+.small-product__name {
+  font-size: 16px;
+  font-weight: 600;
+  flex: 0 1 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-product__quantity {
+  display: flex;
+  flex: 0 1 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-product__btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid lightgrey;
+  color: grey;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.small-product__btn-delete {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid lightgrey;
+  color: grey;
+  &:hover {
+    transform: scale(1.3);
+  }
+  background-color: palevioletred;
+  color: white;
+
+}
+
+.small-product__price {
+  display: none;
+}
+
+.small-product__btn-delete-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-product__final-price {
+  min-width: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: " ₸";
+    font-weight: 400;
+  }
+}
+
+.cart-icon {
+  display: flex;
+
+  @media (max-width: 800px) {
+
+  }
+
+  background-color: white;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  .cart-icon__amount {
+    background-color: #6a11cb;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    border-radius: 100%;
+    padding: 5px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+  }
+
+  border-radius: 100%;
+  border: 1px solid lightgrey;
+
+  .cart-icon__image {
+    max-width: 50%;
+  }
+}
+
+.cart-icon-wrapper {
+  position: fixed;
+  top: 150px;
+  right: 25px;
+}
+
+.small-product__amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
